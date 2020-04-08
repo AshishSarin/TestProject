@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import SelectorView from './components/SelectorView';
 import ContentView from './components/ContentView';
+import ShortCircuit from './components/ShortCircuit.js';
 
 
 class App extends React.Component {
@@ -20,14 +21,16 @@ class App extends React.Component {
                 <StatusBar barStyle="dark-content" />
                 <SafeAreaView style={styles.container}>
                     <ContentView selectedView={this.state.selectedView} />
-                    <SelectorView onSetViewType={this.onSetViewType} />
+                    {/** Uncomment below to see second approach */}
+                    {/* <ShortCircuit selectedView={this.state.selectedView}/> */}
+                    <SelectorView onSelectView={this.onSelectView} />
                 </SafeAreaView>
             </>
         );
     }
 
 
-    onSetViewType = (viewType) => {
+    onSelectView = (viewType) => {
         this.setState({
             selectedView: viewType
         })

@@ -36,23 +36,23 @@ class SelectorView extends Component {
     }
 
     onPressShowButton = () => {
-        this.props.onSetViewType?.(ViewTypes.BUTTON);
+        this.props.onSelectView?.(ViewTypes.BUTTON);
     }
 
     onPressShowText = () => {
-        this.props.onSetViewType?.(ViewTypes.TEXT);
+        this.props.onSelectView?.(ViewTypes.TEXT);
     }
 
     onPressShowTextInput = () => {
-        this.props.onSetViewType?.(ViewTypes.TEXT_INPUT);
+        this.props.onSelectView?.(ViewTypes.TEXT_INPUT);
     }
 
     onPressShowImage = () => {
-        this.props.onSetViewType?.(ViewTypes.IMAGE);
+        this.props.onSelectView?.(ViewTypes.IMAGE);
     }
 
     onPressShowLoader = () => {
-        this.props.onSetViewType?.(ViewTypes.LOADER);
+        this.props.onSelectView?.(ViewTypes.LOADER);
     }
 
 }
